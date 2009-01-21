@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>ExtJS Blog</title>
+    <link rel="stylesheet" href="stylesheets/ext-all.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="stylesheets/solitaire.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="stylesheets/left-menu-viewport-layout.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="stylesheets/blog.css" type="text/css" media="screen" charset="utf-8" />
+  </head>
+  <body>
+    <!-- Core Ext and Ext MVC libraries -->
+    <div id="ext-mvc-core">
+      <script type="text/javascript" src="../vendor/ext/adapter/ext/ext-base.js"></script>
+      <script type="text/javascript" src="../vendor/ext/ext-all-debug.js"></script>
+      <!--<script type="text/javascript" src="../vendor/mvc/ext-mvc-all.js"></script>-->
+      
+      <script type="text/javascript" src="../vendor/mvc/MVC.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/lib/String.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/lib/Router.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/lib/Route.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/controller/Controller.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/os/OS.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/Model.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/Cache.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/UrlBuilder.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/Association.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/HasManyAssociation.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/BelongsToAssociation.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/adapters/AbstractAdapter.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/adapters/RESTAdapter.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/model/adapters/KohiveAdapter.js"></script>
+      
+      <script type="text/javascript" src="../vendor/mvc/os/viewportbuilder/ViewportBuilderManager.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/os/viewportbuilder/ViewportBuilder.js"></script>
+      
+      <script type="text/javascript" src="../vendor/mvc/view/scaffold/ScaffoldFormPanel.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/view/scaffold/Index.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/view/scaffold/New.js"></script>
+      <script type="text/javascript" src="../vendor/mvc/view/scaffold/Edit.js"></script>
+    </div>
+    
+    <!-- Configuration files -->
+    <div id="ext-mvc-config">
+      <script type="text/javascript" src="../config/initialize.js"></script>
+      <script type="text/javascript" src="../config/database.js"></script>
+      <script type="text/javascript" src="../config/routes.js"></script>
+    </div>
+    
+    <!-- Include any third party libraries/plugin files here -->
+    <div id="ext-mvc-plugins">
+    
+      <!-- Installed on 13/1/2009 from vendor/plugins/LeftMenuViewportBuilder -->
+      <div id="ext-mvc-plugins-LeftMenuViewportBuilder">
+        <script type="text/javascript" src="../vendor/plugins/LeftMenuViewportBuilder/LeftMenuViewportBuilder.js"></script>
+        <script type="text/javascript" src="../vendor/plugins/LeftMenuViewportBuilder/MenuLink.js"></script>
+      </div>
+      
+    </div>
+    
+    <!-- Include your application files here -->
+    <div id="ext-mvc-application">
+      <script type="text/javascript" src="../app/OS.js"></script>
+      
+      <div id="ext-mvc-application-models">
+        <script type="text/javascript" src="../app/models/User.js"></script>
+        <script type="text/javascript" src="../app/models/Post.js"></script>
+        <script type="text/javascript" src="../app/models/Comment.js"></script>
+      </div>
+      
+      <div id="ext-mvc-application-controllers">
+        <script type="text/javascript" src="../app/controllers/UsersController.js"></script>
+        <script type="text/javascript" src="../app/controllers/PostsController.js"></script>
+        <script type="text/javascript" src="../app/controllers/CommentsController.js"></script>
+      </div>
+      
+      <div id="ext-mvc-application-views">
+        <script type="text/javascript" src="../app/views/posts/Index.js"></script>
+        <script type="text/javascript" src="../app/views/posts/New.js"></script>
+        <script type="text/javascript" src="../app/views/posts/Edit.js"></script>
+      </div>
+      
+      <script type="text/javascript" src="application.js"></script>
+    </div>
+  </body>
+</html>

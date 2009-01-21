@@ -1,0 +1,40 @@
+= ExtJS MVC Base App
+
+Ext MVC Application structure for any new MVC application.  Structure inspired by Ruby on Rails.
+
+== Installation
+
+Clone this as the starting point for your apps.  Currently you will need to install Ext MVC into vendor/mvc manually.  Preferred way to do this is as a git submodule:
+
+git submodule add git://github.com/edspencer/ext-mvc.git vendor/mvc
+
+Place your cloned directory somewhere apache can serve it, then head to public/indexdev.html:
+
+http://localhost/myDirectory/public/indexdev.html
+
+You should see a default application set up and ready to go.
+
+== Directory Structure:
+
+app             - a directory to contain your models, views and controllers
+app/controllers - contains all of your controllers
+app/models      - contains all modesl
+app/views       - contains all view files, usually in subdirectories (e.g. app/views/users/Index.js)
+config          - contains application configuration files (see below)
+lib             - contains any library files which are not suited to being plugins
+public          - the directory you will set as document root on your web server.  Place any public-facing assets in here.  Note that all javascript and stylesheet files will be concatenated automatically into here when you deploy, so these can exist outside of this folder.  Images and other assets will need to be placed here though.
+script          - contains scripts to automate site build and minification
+spec            - a directory to place your unit tests or specs
+vendor          - holds any third-party code
+vendor/ext      - contains the required version of ExtJS.  ExtJS 2.2 comes pre-installed here, with the Ext adapter.
+vendor/mvc      - contains the required version of Ext MVC.  Most recent stable version installed by default.  Obtain latest version from http://github.com/edspencer/ext-mvc/tree
+vendor/plugins  - contains any MVC-compatible plugins (such as viewport builders, model extensions etc)
+
+== Important Files:
+
+config/database.js   - define which data adapter your app uses (RESTful adapter, Gears adapter, your own concoction etc)
+config/routes.js     - set up any Ext.History related routing required (see file for help)
+config/initialize.js - any app-wide config code, such as setting up location of s.gif, booting your app, etc
+
+public/indexdev.html - Development version of the site, including one file at a time and using ext-all-debug
+public/index.html    - Production version of the site referencing concatenated and minified files
